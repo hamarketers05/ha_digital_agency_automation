@@ -1,0 +1,19 @@
+name = "ha-digital-agency-core"
+main = "src/index.js"
+compatibility_date = "2026-10-13"
+workers_dev = true
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+persist = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ha-digital-agency-db"
+database_id = "ce0b34f5-ea78-495c-bbf1-6dc4dfae8d41"
+migrations_dir = "migrations"
