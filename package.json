@@ -1,0 +1,12 @@
+{
+  "name": "ha-digital-agency-automation",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Isolated HA Digital Agency automation Worker and its versioned D1 schema",
+  "scripts": {
+    "check": "node --check src/index.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}
