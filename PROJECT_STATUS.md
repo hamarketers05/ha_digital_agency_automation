@@ -27,9 +27,10 @@
 - [x] Direct D1 API smoke record was inserted and read back: ID `phase1-test-20261014-0750-pkt`, event `phase1_d1_connectivity_test`, outcome `ok`, timestamp `2026-10-14T02:50:00Z`. This was an API-level test, not a Worker-originated write/read.
 - [x] No Worker script secrets or Cron schedules are configured. This is intentional until the matching integration/job is implemented and authorized.
 - [x] Public repository `hamarketers05/ha_digital_agency_automation` contains README, status/architecture/security docs, Worker source, migration, tests, package manifest, Wrangler configuration, gitignore, and quality workflow.
-- [x] GitHub Actions quality workflow passed on `main`, run #15 (`38503490595`, commit `9429a10a53607d69711ed5cdd49aeae1bd7881b4`) on 2026-10-14; `npm run check` and `npm test` passed.
+- [x] Latest verified GitHub Actions quality workflow on `main` passed as run #22 (`38504797552`, commit `e888b1c2c5548fc2f84b0785cb87958d4a7a19e7`) on 2026-10-14 at 03:09:54Z; Node 20 setup, `npm run check`, and `npm test` all completed successfully.
 - [x] Source/schema guardrails cover <=30-second Reels, idempotency, bounded retries, evidence storage, opt-outs, and no WhatsApp outreach channel.
-- [x] Cloudflare Workers Builds repository-connection record exists for `hamarketers05/ha_digital_agency_automation` (connection UUID `febd1046-4e1e-420d-9c74-6e1e32958d2f`). This alone is not an automatic deployment trigger.
+- [x] Cloudflare Workers Builds repository-connection record was created for `hamarketers05/ha_digital_agency_automation` (connection UUID `febd1046-4e1e-420d-9c74-6e1e32958d2f`).
+- [ ] Rechecked live Cloudflare Build settings: no build token exists; the HA Worker has no Builds configuration, its trigger list is empty, and its build history is empty. The repository connection alone does not deploy.
 - [x] No paid service or billing setting was enabled.
 - [x] Groq primary-provider decision is documented in `ARCHITECTURE.md`.
 
