@@ -1,7 +1,7 @@
 # Project status ledger
 
 **Last reviewed:** 2026-10-14  
-**Current phase:** Phase 1 — planning/architecture locked; operational acceptance checks still pending  
+**Current phase:** Blueprint Section 14, Phase B (website) deployed; core-automation acceptance items remain open  
 **Release:** `0.1.0-foundation`
 
 ## Architecture decisions locked
