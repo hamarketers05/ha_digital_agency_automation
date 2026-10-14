@@ -27,12 +27,25 @@
 - [x] Direct D1 API smoke record was inserted and read back: ID `phase1-test-20261014-0750-pkt`, event `phase1_d1_connectivity_test`, outcome `ok`, timestamp `2026-10-14T02:50:00Z`. This was an API-level test, not a Worker-originated write/read.
 - [x] No Worker script secrets or Cron schedules are configured. This is intentional until the matching integration/job is implemented and authorized.
 - [x] Public repository `hamarketers05/ha_digital_agency_automation` contains README, status/architecture/security docs, Worker source, migration, tests, package manifest, Wrangler configuration, gitignore, and quality workflow.
-- [x] Latest verified GitHub Actions quality workflow on `main` passed as run #22 (`38504797552`, commit `e888b1c2c5548fc2f84b0785cb87958d4a7a19e7`) on 2026-10-14 at 03:09:54Z; Node 20 setup, `npm run check`, and `npm test` all completed successfully.
+- [x] Isolated static website files are present under `website/`; the root Worker configuration and D1 binding were not changed for the website.
+- [x] Latest website-inclusive GitHub Actions quality run #40 (`38507668217`) passed on `main` at commit `623306b48afc00933da32968f5ef6e8566bf9bcb`; Node 20 setup, `npm run check`, and `npm test` passed. Tests cover site files, metadata, local references, sitemap/robots and contact-form safety. Evidence: https://github.com/hamarketers05/ha_digital_agency_automation/actions/runs/38507668217.
 - [x] Source/schema guardrails cover <=30-second Reels, idempotency, bounded retries, evidence storage, opt-outs, and no WhatsApp outreach channel.
 - [x] Cloudflare Workers Builds repository-connection record was created for `hamarketers05/ha_digital_agency_automation` (connection UUID `febd1046-4e1e-420d-9c74-6e1e32958d2f`).
 - [ ] Rechecked live Cloudflare Build settings: no build token exists; the HA Worker has no Builds configuration, its trigger list is empty, and its build history is empty. The repository connection alone does not deploy.
 - [x] No paid service or billing setting was enabled.
 - [x] Groq primary-provider decision is documented in `ARCHITECTURE.md`.
+- [x] Blueprint Section 14 Phase B website built in isolated `website/`: homepage, services, approach/about, project brief, privacy, terms, 404, responsive CSS, local JavaScript, canonical/Open Graph metadata, `robots.txt`, `sitemap.xml`, and basic security headers. No fabricated case studies or testimonials.
+- [x] Dedicated Pages project `ha-digital-agency-site` created (project ID `40a24246-f305-4ead-86d8-ad66e3bafb9d`) and configured for repository `hamarketers05/ha_digital_agency_automation`, branch `main`, root directory `website`, blank build command, output directory `.`.
+- [x] Cloudflare reports production deployment `9b9c5259-0d60-4b1f-aaf7-6a122c92c597` succeeded. Project hostname: `https://ha-digital-agency-site.pages.dev`; deployment URL: `https://9b9c5259.ha-digital-agency-site.pages.dev`.
+- [x] Website is static and independent: no Worker/D1 binding, analytics provider, third-party font dependency, paid billing or tracking script was added.
+
+## Blueprint Section 14 — Phase B website: remaining before production-ready
+
+- [ ] Add the agency's confirmed, owned contact inbox to `website/config.js`. Until then, the brief form prepares a local copyable brief and does not send or store submissions.
+- [ ] Confirm whether to use the `pages.dev` hostname or a custom domain; if a custom domain is chosen, update canonical/Open Graph URLs, `sitemap.xml` and `robots.txt`.
+- [ ] Review the starter privacy notice and terms against actual business practices and applicable law.
+- [ ] Open the public site on a phone and desktop to visually verify rendering, navigation, keyboard focus, contact CTA and all pages. Cloudflare deployment stages and CI are verified; this environment could not independently fetch the public page over HTTP.
+- [ ] Complete Google Search Console ownership verification and submit the deployed sitemap; this requires the account owner's authorization.
 
 ## Remaining for Phase 1 acceptance
 
@@ -55,7 +68,7 @@
 - The current Cloudflare API identity could not create/list the required account API-token permissions (error 9109). Do not fabricate a token, reuse unrelated credentials, or place secrets in source. Dashboard-authorized least-privilege setup is needed.
 - External HTTP access to workers.dev has not yet been independently confirmed; a configured route is not proof of a successful browser response.
 - Groq is the selected primary provider, but no live Groq request is claimed until a secret is configured and a controlled API test passes. Free limits can change; do not enable billing.
-- No Meta authorization, social publishing, active scheduled content generation, media rendering, verified live leads, outbound outreach, or website deployment is claimed as implemented.
+- No Meta authorization, social publishing, active scheduled content generation, media rendering, verified live leads, or outbound outreach is claimed as implemented. Static website deployment is confirmed by Cloudflare's deployment API; direct external HTTP/mobile visual verification and Search Console setup remain open.
 
 ## Acceptance rules before enabling automation
 
