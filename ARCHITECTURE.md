@@ -4,10 +4,10 @@
 
 | Component | Responsibility | Current state |
 |---|---|---|
-| `ha-digital-agency-core` Cloudflare Worker | Small API surface, job orchestration, health/status, scheduled coordinator | Created; writes and scheduled processing disabled |
-| `ha-digital-agency-db` Cloudflare D1 | Jobs, content assets, publishing attempts, research evidence, leads, proposal drafts, opt-outs, audit | Created fresh; runtime SQL probe pending quota reset |
-| `ha_digital_agency_automation` GitHub repository | Version-controlled Worker code, migrations, tests and later rendering automation | Public repository exists; files are being seeded; Cloudflare build connection not yet verified |
-| GitHub Actions | CI tests now; optional bounded media rendering later after quota/cost/licence review | Quality workflow included; rendering not enabled |
+| `ha-digital-agency-core` Cloudflare Worker | Small API surface, job orchestration, health/status, scheduled coordinator | Created and deployed; writes and scheduled processing intentionally disabled |
+| `ha-digital-agency-db` Cloudflare D1 | Jobs, content assets, publishing attempts, research evidence, leads, proposal drafts, opt-outs, audit | Created fresh; live query verified all 11 expected application tables |
+| `ha_digital_agency_automation` GitHub repository | Version-controlled Worker code, migrations, tests and later rendering automation | Project files are seeded and committed; Cloudflare build connection is not configured yet |
+| GitHub Actions | CI tests now; optional bounded media rendering later after quota/cost/licence review | Quality workflow is present; local test suite passes; hosted CI run not yet verified |
 | Meta APIs | Official authorized Facebook/Instagram publishing | Not connected |
 
 ## Non-negotiable isolation
