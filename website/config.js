@@ -1,5 +1,6 @@
 /* Public website settings only. Never place API keys or secrets in this file. */
 window.HA_SITE_CONFIG = {
-  /* Add the agency's real inbox before launch, e.g. contactEmail: "team@your-owned-domain.com" */
-  contactEmail: ""
+  contactEmail: "hamarketers05@gmail.com",
+  whatsappNumber: "923276381071",
+  whatsappUrl: "https://wa.me/923276381071"
 };
