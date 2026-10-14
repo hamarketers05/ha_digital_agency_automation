@@ -45,6 +45,7 @@
 - [ ] Confirm whether to use the `pages.dev` hostname or a custom domain; if a custom domain is chosen, update canonical/Open Graph URLs, `sitemap.xml` and `robots.txt`.
 - [ ] Review the starter privacy notice and terms against actual business practices and applicable law.
 - [ ] Open the public site on a phone and desktop to visually verify rendering, navigation, keyboard focus, contact CTA and all pages. Cloudflare deployment stages and CI are verified; this environment could not independently fetch the public page over HTTP.
+- [ ] Verify that a normal `main` push creates a Pages deployment. Git source settings are configured, but Cloudflare currently lists only the manually triggered deployment, so automatic push deployment is not verified.
 - [ ] Complete Google Search Console ownership verification and submit the deployed sitemap; this requires the account owner's authorization.
 
 ## Remaining for Phase 1 acceptance
@@ -64,7 +65,8 @@
 
 ## Blockers and caveats
 
-- Cloudflare's Builds API previously returned zero build tokens. The saved repository connection alone does not enable automatic deployments.
+- Cloudflare's Builds API previously returned zero build tokens. The saved Worker repository connection alone does not enable Worker deployments.
+- The Pages project has GitHub source settings, but a normal push has not yet produced an automatic Pages deployment; verify GitHub integration authorization and push triggers in the Cloudflare dashboard.
 - The current Cloudflare API identity could not create/list the required account API-token permissions (error 9109). Do not fabricate a token, reuse unrelated credentials, or place secrets in source. Dashboard-authorized least-privilege setup is needed.
 - External HTTP access to workers.dev has not yet been independently confirmed; a configured route is not proof of a successful browser response.
 - Groq is the selected primary provider, but no live Groq request is claimed until a secret is configured and a controlled API test passes. Free limits can change; do not enable billing.
