@@ -23,6 +23,7 @@ The public static site lives in `website/` and is deployed by a separate Cloudfl
 2. Confirm whether a custom domain is available. If host changes, update canonical and Open Graph URLs, `website/sitemap.xml` and `website/robots.txt`.
 3. Review the starter privacy notice and terms against actual business practices and applicable law.
 4. Verify desktop/mobile layout, links, headers, contact form behaviour and live HTTP responses.
-5. Complete Search Console ownership verification and submit the live sitemap.
+5. In the Cloudflare dashboard, verify the GitHub Pages integration and that a normal push to `main` starts a production deployment. The initial deployment was triggered manually; automatic push triggering is not yet verified.
+6. Complete Search Console ownership verification and submit the live sitemap.
 
 No contact inbox, custom domain, Search Console ownership, search ranking, or client results are assumed or fabricated.
