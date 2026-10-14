@@ -94,7 +94,7 @@ export async function generateWithGroq(
         : null,
     };
   } catch (error) {
-    if (error instanceof GroqConfigurationError || error instanceof GroqRequestError || error instanceof TypeError || error instanceof RangeError) throw error;
+    if (error instanceof GroqConfigurationError || error instanceof GroqRequestError) throw error;
     if (error?.name === "AbortError") {
       throw new GroqRequestError("Groq request timed out.", { retryable: true });
     }
